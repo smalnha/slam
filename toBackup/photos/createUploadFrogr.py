@@ -62,6 +62,7 @@ except ValueError:
 tagMap=[
       [r'(?:bday|birthday)$',"birthday"],
       [r'birth',"birthday"],
+      [r'graduation',"graduation"],
       [r'frances',"Frances"],
       [r'hao',"Hao"],
       [r'frances',"Frances"],
@@ -80,7 +81,7 @@ def addMoreTags(photoDirPath, filename):
    return tagstr
 
 jpgfiles = [filename for filename in os.listdir(photoDirPath) 
-   if re.search(r'\.(?:jpg|png|mpg|avi|mov)$', filename, re.IGNORECASE)]
+   if re.search(r'\.(?:jpg|png|mpg|avi|mov|mp4)$', filename, re.IGNORECASE)]
 
 jpgfiles.sort()
 #print ("jpgfiles: ", jpgfiles)

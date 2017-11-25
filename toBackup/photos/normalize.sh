@@ -224,6 +224,9 @@ mvToUnique(){
 	[ "$1" == "is" ] && return 0  # to handle '___ is a function' printed by 'type' command
 	NEWFN=`ensureUniqBaseFn $2`
 	mv -i "$1" "$NEWFN.${1##*.}"
+	for F in ${1%.*}.*; do
+		[ -e "$F" ] && mv -i "$F" "$NEWFN.${F##*.}"
+	done
 }
 
 useMDtoSetFN(){
