@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- adapted from aescrypto.com -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AES Crypto</title>
+    <meta name="description" content="Encrypt text messages with Advanced Encryption Standard on Android, iOS and Web.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="aaes_crypto.css"/>
+<style>
+.button {
+ background: #4E9CAF;
+ padding: 10px;
+ margin-left: 10px;
+ text-align: center;
+ border-radius: 15px;
+ color: white;
+ font-weight: bold;
+ text-decoration: none;
+}
+</style>
+  </head>
+  <body>
+    <div align="center">
+		<br/>
+      Pass key: <input id='PasswordField' type='text' placeholder='key' autofocus tabindex='1' autocomplete='off' autocapitalize='off' autocorrect='off' spellcheck='false' size='40' />
+      <br/>
+      <textarea id='MessageField' placeholder='Message' tabindex='2' rows="4" style='margin-top:10px; width:90%;'></textarea>
+      <br/>
+      <br/>
+      <a class='button' id='DecryptButton' href='#' style='background-color:red;'>Decrypt</a> 
+      <a class='button' id='EncryptButton' href='#' style='background-color:green;'>Encrypt</a>
+    </div>
+
+    <script src="aescrypto.js"></script>
+  </body>
+</html>
